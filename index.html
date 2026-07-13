@@ -1,69 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lemon Tree Hotel Morbi Feedback</title>
+<title>Lemon Tree Hotel Morbi - Guest Feedback</title>
 
 <style>
 body{
-font-family:Arial,sans-serif;
-background:#f5f5f5;
 margin:0;
 padding:20px;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
 }
+
 .container{
-max-width:500px;
+max-width:600px;
 margin:auto;
-background:white;
+background:#fff;
 padding:20px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+h1{
+text-align:center;
+color:#2E7D32;
+}
+
+h2{
+text-align:center;
+color:#444;
+}
+
+p{
 text-align:center;
 }
-.star{
-display:block;
-text-decoration:none;
-font-size:30px;
-margin:10px 0;
-padding:10px;
-background:#FFD700;
-border-radius:10px;
-color:black;
-}
+
 .review{
-background:#f2f2f2;
-padding:10px;
-margin:10px 0;
-border-radius:8px;
-text-align:left;
+background:#f9f9f9;
+padding:12px;
+margin:12px 0;
+border-radius:10px;
+border-left:5px solid #2E7D32;
 }
+
 button{
-padding:8px 15px;
-background:#28a745;
-color:white;
+background:#2E7D32;
+color:#fff;
 border:none;
-border-radius:5px;
+padding:10px 15px;
+border-radius:6px;
 cursor:pointer;
-margin-top:5px;
+margin-top:10px;
 }
-.thank{
-font-size:22px;
-margin-top:20px;
-color:green;
+
+button:hover{
+background:#1b5e20;
 }
+
+.reviewbtn{
+display:block;
+text-align:center;
+background:#FFD700;
+color:#000;
+text-decoration:none;
+padding:15px;
+font-size:20px;
+border-radius:10px;
+margin-top:25px;
+font-weight:bold;
+}
+
 .footer{
+text-align:center;
 margin-top:20px;
-font-size:14px;
-color:#555;
+color:#666;
 }
 </style>
 
 <script>
 function copyReview(text){
 navigator.clipboard.writeText(text);
-alert("Review Copied! Now click any star and paste the review.");
+alert("Review copied successfully! Now tap 'Write Google Review' and paste it.");
 }
 </script>
 
@@ -77,35 +95,46 @@ alert("Review Copied! Now click any star and paste the review.");
 
 <h2>Guest Feedback</h2>
 
-<p>Select a review, copy it, then click ⭐⭐⭐⭐⭐ to post on Google.</p>
+<p>Please select any review, copy it, then open Google Review and paste it if it reflects your experience.</p>
 
 <div class="review">
-Excellent food and outstanding service. The staff was very polite and professional.
-<br><button onclick="copyReview('Excellent food and outstanding service. The staff was very polite and professional.')">Copy Review</button>
+Excellent food and outstanding service. The staff was polite and friendly. Highly recommended!
+<br>
+<button onclick="copyReview('Excellent food and outstanding service. The staff was polite and friendly. Highly recommended!')">Copy Review</button>
 </div>
 
 <div class="review">
-Had a wonderful experience. Delicious food and great hospitality. Highly recommended.
-<br><button onclick="copyReview('Had a wonderful experience. Delicious food and great hospitality. Highly recommended.')">Copy Review</button>
+Amazing hospitality and delicious food. Everything was fresh and well prepared.
+<br>
+<button onclick="copyReview('Amazing hospitality and delicious food. Everything was fresh and well prepared.')">Copy Review</button>
 </div>
 
 <div class="review">
-Very tasty food, clean restaurant, and excellent customer service.
-<br><button onclick="copyReview('Very tasty food, clean restaurant, and excellent customer service.')">Copy Review</button>
+Very clean restaurant with quick service and tasty food. Great experience!
+<br>
+<button onclick="copyReview('Very clean restaurant with quick service and tasty food. Great experience!')">Copy Review</button>
 </div>
 
 <div class="review">
-Amazing ambiance, friendly staff, and delicious meals. Will visit again.
-<br><button onclick="copyReview('Amazing ambiance, friendly staff, and delicious meals. Will visit again.')">Copy Review</button>
+Wonderful dining experience. Friendly staff and excellent quality food.
+<br>
+<button onclick="copyReview('Wonderful dining experience. Friendly staff and excellent quality food.')">Copy Review</button>
 </div>
 
-<a href="https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g" target="_blank" class="star">⭐⭐⭐⭐⭐ Write Google Review</a>
+<div class="review">
+Loved the food, service, and ambience. Will definitely visit again.
+<br>
+<button onclick="copyReview('Loved the food, service, and ambience. Will definitely visit again.')">Copy Review</button>
+</div>
 
-<p class="thank">Thank You ❤️</p>
+<a class="reviewbtn" href="https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g" target="_blank">
+⭐⭐⭐⭐⭐ Write Google Review
+</a>
 
-<p class="footer">
-Prepared By <b>Deepak Paneru</b>
-</p>
+<div class="footer">
+Thank You ❤️<br>
+We appreciate your valuable feedback.
+</div>
 
 </div>
 
