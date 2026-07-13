@@ -19,69 +19,84 @@ margin:auto;
 background:#fff;
 padding:20px;
 border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,0.15);
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 h1{
 text-align:center;
-color:#2E7D32;
+color:#2e7d32;
+margin-bottom:5px;
 }
 
 h2{
 text-align:center;
-color:#444;
+color:#555;
+margin-top:0;
 }
 
-p{
+.stars{
 text-align:center;
+font-size:32px;
+color:#ffc107;
+margin:15px 0;
 }
 
-.review{
-background:#f9f9f9;
+textarea{
+width:100%;
+height:160px;
 padding:12px;
-margin:12px 0;
+font-size:16px;
+border:1px solid #ccc;
 border-radius:10px;
-border-left:5px solid #2E7D32;
+box-sizing:border-box;
+resize:vertical;
 }
 
 button{
-background:#2E7D32;
-color:#fff;
+width:100%;
+padding:14px;
+margin-top:12px;
+font-size:16px;
 border:none;
-padding:10px 15px;
-border-radius:6px;
+border-radius:10px;
 cursor:pointer;
-margin-top:10px;
 }
 
-button:hover{
-background:#1b5e20;
+.copy{
+background:#2e7d32;
+color:#fff;
 }
 
-.reviewbtn{
+.review{
 display:block;
 text-align:center;
-background:#FFD700;
-color:#000;
 text-decoration:none;
-padding:15px;
-font-size:20px;
+background:#f4b400;
+color:#000;
+padding:14px;
 border-radius:10px;
-margin-top:25px;
 font-weight:bold;
+margin-top:12px;
 }
 
 .footer{
 text-align:center;
-margin-top:20px;
-color:#666;
+margin-top:25px;
+color:#555;
 }
 </style>
 
 <script>
-function copyReview(text){
+function copyReview(){
+const text=document.getElementById("review").value.trim();
+
+if(text===""){
+alert("Please write your feedback first.");
+return;
+}
+
 navigator.clipboard.writeText(text);
-alert("Review copied successfully! Now tap 'Write Google Review' and paste it.");
+alert("Your feedback has been copied. You can now open Google Review and paste it.");
 }
 </script>
 
@@ -92,48 +107,23 @@ alert("Review copied successfully! Now tap 'Write Google Review' and paste it.")
 <div class="container">
 
 <h1>🍋 Lemon Tree Hotel Morbi</h1>
-
 <h2>Guest Feedback</h2>
 
-<p>Please select any review, copy it, then open Google Review and paste it if it reflects your experience.</p>
+<div class="stars">⭐⭐⭐⭐⭐</div>
 
-<div class="review">
-Excellent food and outstanding service. The staff was polite and friendly. Highly recommended!
-<br>
-<button onclick="copyReview('Excellent food and outstanding service. The staff was polite and friendly. Highly recommended!')">Copy Review</button>
-</div>
+<p>Please share your experience in your own words.</p>
 
-<div class="review">
-Amazing hospitality and delicious food. Everything was fresh and well prepared.
-<br>
-<button onclick="copyReview('Amazing hospitality and delicious food. Everything was fresh and well prepared.')">Copy Review</button>
-</div>
+<textarea id="review" placeholder="Example: We enjoyed our stay. The food, service, cleanliness, and hospitality met our expectations."></textarea>
 
-<div class="review">
-Very clean restaurant with quick service and tasty food. Great experience!
-<br>
-<button onclick="copyReview('Very clean restaurant with quick service and tasty food. Great experience!')">Copy Review</button>
-</div>
+<button class="copy" onclick="copyReview()">📋 Copy My Feedback</button>
 
-<div class="review">
-Wonderful dining experience. Friendly staff and excellent quality food.
-<br>
-<button onclick="copyReview('Wonderful dining experience. Friendly staff and excellent quality food.')">Copy Review</button>
-</div>
-
-<div class="review">
-Loved the food, service, and ambience. Will definitely visit again.
-<br>
-<button onclick="copyReview('Loved the food, service, and ambience. Will definitely visit again.')">Copy Review</button>
-</div>
-
-<a class="reviewbtn" href="https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g" target="_blank">
+<a class="review" href="Lemon Tree Hotel, Morbi https://share.google/f8cXgY2l0DkoKqAAh" target="_blank">
 ⭐⭐⭐⭐⭐ Write Google Review
 </a>
 
 <div class="footer">
-Thank You ❤️<br>
-We appreciate your valuable feedback.
+<p>❤️ Thank you for your valuable feedback.</p>
+<p><strong>Warm Regards,<br>Chef Deepak</strong></p>
 </div>
 
 </div>
