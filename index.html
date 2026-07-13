@@ -1,10 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lemon Tree Hotel Morbi Feedback</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:20px;
+}
+.container{
+max-width:500px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+text-align:center;
+}
+.star{
+display:block;
+text-decoration:none;
+font-size:30px;
+margin:10px 0;
+padding:10px;
+background:#FFD700;
+border-radius:10px;
+color:black;
+}
+.review{
+background:#f2f2f2;
+padding:10px;
+margin:10px 0;
+border-radius:8px;
+text-align:left;
+}
+button{
+padding:8px 15px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:5px;
+}
+.thank{
+font-size:22px;
+margin-top:20px;
+color:green;
+}
+.footer{
+margin-top:20px;
+font-size:14px;
+color:#555;
+}
+</style>
+
+<script>
+function copyReview(text){
+navigator.clipboard.writeText(text);
+alert("Review Copied! Now click any star and paste the review.");
+}
+</script>
+
 </head>
 
 <body>
@@ -15,22 +77,29 @@
 
 <h2>Guest Feedback</h2>
 
-<p>Please rate your experience</p>
+<p>Select a review, copy it, then click ⭐⭐⭐⭐⭐ to post on Google.</p>
 
-<div class="rating">
-
-https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g target="_blank" class="star">⭐</a>
-
-https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g target="_blank" class="star">⭐</a>
-
-https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g target="_blank" class="star">⭐</a>
-
-https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g target="_blank" class="star">⭐</a>
-
-https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g target="_blank" class="star">⭐</a>
-
-
+<div class="review">
+Excellent food and outstanding service. The staff was very polite and professional.
+<br><button onclick="copyReview('Excellent food and outstanding service. The staff was very polite and professional.')">Copy Review</button>
 </div>
+
+<div class="review">
+Had a wonderful experience. Delicious food and great hospitality. Highly recommended.
+<br><button onclick="copyReview('Had a wonderful experience. Delicious food and great hospitality. Highly recommended.')">Copy Review</button>
+</div>
+
+<div class="review">
+Very tasty food, clean restaurant, and excellent customer service.
+<br><button onclick="copyReview('Very tasty food, clean restaurant, and excellent customer service.')">Copy Review</button>
+</div>
+
+<div class="review">
+Amazing ambiance, friendly staff, and delicious meals. Will visit again.
+<br><button onclick="copyReview('Amazing ambiance, friendly staff, and delicious meals. Will visit again.')">Copy Review</button>
+</div>
+
+<a href="https://search.google.com/local/writereview?placeid=ChIJWVxA_5uNWTkRJd1W-DoFH3g" target="_blank" class="star">⭐⭐⭐⭐⭐ Write Google Review</a>
 
 <p class="thank">Thank You ❤️</p>
 
